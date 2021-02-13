@@ -21,7 +21,7 @@ Flix is an app that allows users to browse movies from the [The Movie Database A
 - [ ] (2pts) For popular movies (i.e. a movie voted for more than 5 stars), the full backdrop image is displayed. Otherwise, a poster image, the movie title, and overview is listed. Use Heterogenous RecyclerViews and use different ViewHolder layout files for popular movies and less popular ones.
 
 ### App Walkthrough GIF
-<img src="https://submissions.us-east-1.linodeobjects.com/android_university/49DaQVf5.gif" width=250>
+<img src="https://github.com/q815101630/codepathProjectsSpring2021/blob/master/Flixster/snapshot.gif" width=250>
 
 ### Notes
 Describe any challenges encountered while building the app.
