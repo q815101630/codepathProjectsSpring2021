@@ -18,6 +18,17 @@
         android:layout_marginTop="0dp"
         tools:srcCompat="@tools:sample/avatars" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/playerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="151dp"
+        android:clickable="false"
+        app:backgroundTint="#52FFFFFF"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
     <TextView
         android:id="@+id/tvTitle"
         android:transitionName="title"

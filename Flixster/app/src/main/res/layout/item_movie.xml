@@ -49,4 +49,18 @@
         android:layout_centerVertical="true"
         android:layout_marginStart="36dp" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/playerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="21dp"
+        android:clickable="false"
+        android:contentDescription="@string/show_trailer"
+        app:backgroundTint="#52FFFFFF"
+        app:fabSize="normal"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
 </RelativeLayout>

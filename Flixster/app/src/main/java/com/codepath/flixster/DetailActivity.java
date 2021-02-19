@@ -31,6 +31,8 @@ public class DetailActivity extends YouTubeBaseActivity {
     RatingBar ratingBar;
     YouTubePlayerView youTubePlayerView;
     String youtubeKey;
+    Movie movie;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +43,7 @@ public class DetailActivity extends YouTubeBaseActivity {
         ratingBar = findViewById(R.id.ratingBar);
         youTubePlayerView = (YouTubePlayerView) findViewById(R.id.player);
 
-        Movie movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra("movie"));
+        movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra("movie"));
         AsyncHttpClient client = new AsyncHttpClient();
         client.get(String.format(videoURL, movie.getId()), new JsonHttpResponseHandler() {
             @Override
@@ -79,7 +81,13 @@ public class DetailActivity extends YouTubeBaseActivity {
             @Override
             public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
                 Log.d("detailActivity", "InitializeOnSuccess");
+                // if 5 stars more, auto play, otherwise not
+                if (movie.getRating() >= 5.0){
+                    youTubePlayer.loadVideo(youtubeKey);
+                }
+                else{
                 youTubePlayer.cueVideo(youtubeKey);
+                }
             }
 
             @Override

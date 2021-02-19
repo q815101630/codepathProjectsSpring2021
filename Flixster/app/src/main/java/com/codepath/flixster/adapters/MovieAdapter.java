@@ -9,6 +9,7 @@ import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -30,6 +31,7 @@ import com.codepath.flixster.DetailActivity;
 import com.codepath.flixster.MainActivity;
 import com.codepath.flixster.R;
 import com.codepath.flixster.models.Movie;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.parceler.Parcel;
 import org.parceler.Parcels;
@@ -80,6 +82,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
         TextView tvOverview;
         ImageView ivPoster;
         RelativeLayout container;
+        FloatingActionButton playerButton;
         //constructor
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -89,6 +92,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
             ivPoster = itemView.findViewById(R.id.ivPoster);
             progressBar = itemView.findViewById(R.id.progressBar);
             container = itemView.findViewById(R.id.container);
+            playerButton = itemView.findViewById(R.id.playerButton);
         }
 
         public void bind(Movie movie) {
@@ -119,10 +123,15 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
                     })
                     .into(ivPoster);
 
+            // if 5 star more, show playerbutton
+            if(movie.getRating() >= 5.0){
+                playerButton.show();
+            }
+            else{
+                playerButton.hide();
+            }
 
             // Navigate to a new activity
-
-
             // Register click listener on the whole row
             container.setOnClickListener(new View.OnClickListener(){
                 @Override
