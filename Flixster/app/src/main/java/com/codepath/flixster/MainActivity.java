@@ -1,25 +1,25 @@
  package com.codepath.flixster;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+ import android.os.Bundle;
+ import android.util.Log;
 
-import android.os.Bundle;
-import android.util.Log;
+ import androidx.appcompat.app.AppCompatActivity;
+ import androidx.recyclerview.widget.LinearLayoutManager;
+ import androidx.recyclerview.widget.RecyclerView;
 
-import com.codepath.asynchttpclient.AsyncHttpClient;
-import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
-import com.codepath.flixster.adapters.MovieAdapter;
-import com.codepath.flixster.models.Movie;
+ import com.codepath.asynchttpclient.AsyncHttpClient;
+ import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
+ import com.codepath.flixster.adapters.MovieAdapter;
+ import com.codepath.flixster.models.*;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+ import org.json.JSONArray;
+ import org.json.JSONException;
+ import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.List;
+ import java.util.ArrayList;
+ import java.util.List;
 
-import okhttp3.Headers;
+ import okhttp3.Headers;
 
 public class MainActivity extends AppCompatActivity {
 

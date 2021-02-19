@@ -1,5 +1,4 @@
 package com.codepath.flixster.adapters;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -37,6 +36,8 @@ import org.parceler.Parcel;
 import org.parceler.Parcels;
 
 import java.util.List;
+
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 /* extending to the VieHolder comes later after completion of
 specific viewHolder,
@@ -106,6 +107,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder>{
                 imgURL = movie.getPosterPath();
             }
             progressBar.setVisibility(View.VISIBLE);
+
             Glide.with(context)
                     .load(imgURL)
                     .listener(new RequestListener<Drawable>() {
