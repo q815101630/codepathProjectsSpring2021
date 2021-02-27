@@ -34,7 +34,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='https://github.com/q815101630/codepathProjectsSpring2021/blob/main/SimpleTwitt/1.gif' />
-
+<img src='https://github.com/q815101630/codepathProjectsSpring2021/blob/main/SimpleTwitt/2.gif' />
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
