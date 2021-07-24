@@ -24,7 +24,7 @@ Please go to individual project to see further details.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [Lucheng Qing - LinkedIn](https://www.linkedin.com/in/lucheng-qing/?locale=en_US) - email: lqing3@illinois.edu
+Name - [Lucheng Qing - LinkedIn](https://www.linkedin.com/in/lucheng-qing/?locale=en_US) - email: lqing3@illinois.edu
 
 Project Link: [https://github.com/q815101630/codepathProjectsSpring2021/](https://github.com/q815101630/codepathProjectsSpring2021/)
 
